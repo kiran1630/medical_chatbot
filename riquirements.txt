@@ -1,0 +1,33 @@
+requirements
+
+user interface part :
+import chainlit as cl
+import random
+from database_conn import database
+from chainlit import AskUserMessage, Message, on_chat_start
+
+
+pediction part:
+        import joblib
+        import numpy as np
+        model = joblib.load('random_model.pkl')
+        names = joblib.load('name_of_disease.joblib')
+        load_function =  joblib.load('input_to_DB.joblib')
+
+recommedation  part
+    gemini :
+        import google.generativeai as genai
+        genai.configure(api_key='AIzaSyDKleYfKAGSaz2krHjTO0U0_BkEzZq-_9U')
+        model = genai.GenerativeModel('gemini-pro')
+
+
+    langchain :
+            import joblib
+            import os
+            os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+            import tensorflow.compat.v1 as tf 
+            from transformers import pipeline
+            from langchain_community.vectorstores import Chroma
+            from pathlib import Path
+
+database part:
