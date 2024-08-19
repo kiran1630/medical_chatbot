@@ -1,7 +1,7 @@
 class gemini_bot:
   def __init__(self):
       import google.generativeai as genai
-      genai.configure(api_key='AIzaSyDKleYfKAGSaz2krHjTO0U0_BkEzZq-_9U')
+      genai.configure(api_key='YOUR KEY')
       self.model = genai.GenerativeModel('gemini-pro')
   
 
