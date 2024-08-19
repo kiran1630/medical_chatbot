@@ -17,7 +17,7 @@ pediction part:
 recommedation  part
     gemini :
         import google.generativeai as genai
-        genai.configure(api_key='AIzaSyDKleYfKAGSaz2krHjTO0U0_BkEzZq-_9U')
+        genai.configure(api_key='Your key')
         model = genai.GenerativeModel('gemini-pro')
 
 
